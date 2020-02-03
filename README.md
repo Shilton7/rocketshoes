@@ -2,34 +2,33 @@
 
 #### Clone project of Netshoes using React and Redux
 
-##<center>Commands and dependencies</center>
-
 <pre>
+##Commands and dependencies
 
 - Project Creation:
 	- create-react-app rocketshoes
 
 - Router DOM (https://www.npmjs.com/package/react-router-dom)
-	-   yarn add react-router-dom
+	- yarn add react-router-dom
 
 - Styled Components (https://styled-components.com/)
-	-   yarn add styled-components
+	- yarn add styled-components
 
 - React Icons (https://react-icons.netlify.com/#/)
-	-   yarn add react-icons
+	- yarn add react-icons
 
 - A lightweight toolset for writing styles in JavaScript(https://github.com/styled-components/polished)
-	-   yarn add polished
+	- yarn add polished
 
 - Axios (https://github.com/axios/axios)
-	-   yarn add axios
+	- yarn add axios
 
 - JSON-Server (https://github.com/typicode/json-server)
-	-     yarn global add json-server
-	-     Enabling server: json-server server.json -p 3333 -w
+	- yarn global add json-server
+	- Enabling server: json-server server.json -p 3333 -w
 
 - Redux (https://react-redux.js.org/)
-	-     yarn add redux react-redux
+	- yarn add redux react-redux
 </pre>
 
 ## Available Scripts
