@@ -7,7 +7,7 @@ import {
 import { Container, ProductTable, Total } from './styles';
 import { connect } from 'react-redux';
 
-function Cart({ cart }) {
+function Cart({ cart, dispatch }) {
   return (
     <Container>
       <ProductTable>
@@ -46,7 +46,16 @@ function Cart({ cart }) {
               </td>
               <td>
                 <button type="button">
-                  <MdDelete size={20} color="#7159c1" />
+                  <MdDelete
+                    size={20}
+                    color="#7159c1"
+                    onClick={() =>
+                      dispatch({
+                        type: 'REMOVE_PRODUCT_TO_CART', //Tipo
+                        id: product.id, //conteudo
+                      })
+                    }
+                  />
                 </button>
               </td>
             </tr>
