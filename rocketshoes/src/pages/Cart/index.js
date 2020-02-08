@@ -6,8 +6,10 @@ import {
 } from 'react-icons/md';
 import { Container, ProductTable, Total } from './styles';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as CartActions from '../../store/modules/cart/action';
 
-function Cart({ cart, dispatch }) {
+function Cart({ cart, removeProductToCart }) {
   return (
     <Container>
       <ProductTable>
@@ -49,12 +51,7 @@ function Cart({ cart, dispatch }) {
                   <MdDelete
                     size={20}
                     color="#7159c1"
-                    onClick={() =>
-                      dispatch({
-                        type: 'REMOVE_PRODUCT_TO_CART', //Tipo
-                        id: product.id, //conteudo
-                      })
-                    }
+                    onClick={() => removeProductToCart(product.id)}
                   />
                 </button>
               </td>
@@ -79,4 +76,8 @@ const mapStateToProps = state => ({
   cart: state.cart,
 });
 
-export default connect(mapStateToProps)(Cart);
+//converter action em props do component
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(CartActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);
