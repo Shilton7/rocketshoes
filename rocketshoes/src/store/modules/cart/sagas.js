@@ -4,6 +4,7 @@ import {
   updateAmountSuccess,
 } from '../../../store/modules/cart/action';
 import api from '../../../services/api';
+import history from '../../../services/history';
 import { formatPrice } from '../../../util/format';
 import { toast } from 'react-toastify';
 
@@ -44,6 +45,9 @@ function* addToCart({ id }) {
 
     //add no carrrinho
     yield put(addToCartSuccess(data));
+
+    //redireciona para a view carrinho
+    history.push('/cart');
   }
 }
 
