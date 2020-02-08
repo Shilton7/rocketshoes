@@ -10,14 +10,14 @@ import { bindActionCreators } from 'redux';
 import * as CartActions from '../../store/modules/cart/action';
 import { formatPrice } from '../../util/format';
 
-function Cart({ cart, removeProductToCart, updateAmount, total }) {
+function Cart({ cart, removeProductToCart, updateAmountRequest, total }) {
   //add quantidade produto
   function increment(product) {
-    updateAmount(product.id, product.amount + 1);
+    updateAmountRequest(product.id, product.amount + 1);
   }
   //remover quantidade produto
   function decrement(product) {
-    updateAmount(product.id, product.amount - 1);
+    updateAmountRequest(product.id, product.amount - 1);
   }
 
   return (

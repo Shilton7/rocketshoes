@@ -8,23 +8,32 @@ export function addToCartRequest(id) {
 //Retorna os dados do produto e adiciona item no carrinho
 export function addToCartSuccess(product) {
   return {
-    type: '@cart/ADD_SUCCESS', //Tipo
-    product, //conteudo
+    type: '@cart/ADD_SUCCESS',
+    product,
   };
 }
 
 //remover item do carrinho
 export function removeProductToCart(id) {
   return {
-    type: '@cart/REMOVE', //Tipo
-    id, //conteudo
+    type: '@cart/REMOVE',
+    id,
+  };
+}
+
+//verifica o valor da quantidade no carrinho
+export function updateAmountRequest(id, amount) {
+  return {
+    type: '@cart/UPDATE_AMOUNT_REQUEST',
+    id,
+    amount,
   };
 }
 
 //atualizar quantidade de produtos no carrinho
-export function updateAmount(id, amount) {
+export function updateAmountSuccess(id, amount) {
   return {
-    type: '@cart/UPDATE_AMOUNT',
+    type: '@cart/UPDATE_AMOUNT_SUCCESS',
     id,
     amount,
   };
