@@ -3,7 +3,7 @@
 #### Clone project of Netshoes using React and Redux
 
 <pre>
-##Commands and dependencies
+<strong>Commands and dependencies</strong>
 
 - Project Creation:
 	- create-react-app rocketshoes
@@ -28,7 +28,25 @@
 	- Enabling server: json-server server.json -p 3333 -w
 
 - Redux (https://react-redux.js.org/)
-	- yarn add redux react-redux
+	 yarn add redux react-redux
+	
+- Immer (https://immerjs.github.io/immer/docs/installation)
+         yarn add immer
+	 
+- Reactotron + Redux (https://github.com/infinitered/reactotron/blob/master/docs/plugin-redux.md)
+    yarn add reactotron-react-js reactotron-redux
+    
+- Redux Saga
+    yarn add redux-saga
+
+- Redux Saga + Reactotron
+    yarn add reactotron-redux-saga
+
+- React-Toastify
+    yarn add react-toastify
+
+- History - Navegação
+    yarn add history
 </pre>
 
 ## Available Scripts
