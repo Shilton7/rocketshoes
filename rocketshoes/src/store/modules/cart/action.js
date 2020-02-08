@@ -1,7 +1,14 @@
-//adicionar item no carrinho
-export function addToCart(product) {
+//Solicita os dados do produto - SAGA
+export function addToCartRequest(id) {
   return {
-    type: '@cart/ADD', //Tipo
+    type: '@cart/ADD_REQUEST', //Tipo
+    id, //conteudo
+  };
+}
+//Retorna os dados do produto e adiciona item no carrinho
+export function addToCartSuccess(product) {
+  return {
+    type: '@cart/ADD_SUCCESS', //Tipo
     product, //conteudo
   };
 }

@@ -22,11 +22,11 @@ class Home extends Component {
     this.setState({ products: dataFormatado });
   }
 
-  handleAddCart = product => {
-    const { addToCart } = this.props;
+  handleAddCart = id => {
+    const { addToCartRequest } = this.props;
 
-    //aciona a action
-    addToCart(product);
+    //aciona a action->saga->reducer
+    addToCartRequest(id);
   };
 
   render() {
@@ -40,7 +40,10 @@ class Home extends Component {
             <img src={product.image} alt={product.title} />
             <strong>{product.title}</strong>
             <span>{product.priceFormatted}</span>
-            <button type="button" onClick={() => this.handleAddCart(product)}>
+            <button
+              type="button"
+              onClick={() => this.handleAddCart(product.id)}
+            >
               <div>
                 <MdAddShoppingCart size={16} color="#FFF" />{' '}
                 {amountHome[product.id] || 0}
